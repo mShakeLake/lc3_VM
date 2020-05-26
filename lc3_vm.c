@@ -166,7 +166,7 @@ void disable_input_buffering()
 	fdwMode = fdwOldMode
 		^ ENABLE_ECHO_INPUT  /* no input echo */
 		^ ENABLE_LINE_INPUT; /* return when one or
-							more characters are available */
+							 more characters are available */
 	SetConsoleMode(hStdin, fdwMode); /* set new mode */
 	FlushConsoleInputBuffer(hStdin); /* clear buffer */
 }
